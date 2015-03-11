@@ -43,7 +43,7 @@ public class UserDaoImpl implements UserDao{
 	
 	/* (non-Javadoc)
 	 * @see com.tanixu.dao.UserDao#findUserByUserAcc(java.lang.String)
-	 * ¸ù¾Ýid²éÑ¯ÓÃ»§
+	 * ï¿½ï¿½ï¿½idï¿½ï¿½Ñ¯ï¿½Ã»ï¿½
 	 */
 	public User findUserById(int userid) {
 		String sql = "select * from user_info where userid = " + userid;
@@ -65,7 +65,7 @@ public class UserDaoImpl implements UserDao{
 	
 	/* (non-Javadoc)
 	 * @see com.tanixu.dao.UserDao#add(com.tanixu.bean.User)
-	 * Ìí¼ÓÓÃ»§
+	 * ï¿½ï¿½ï¿½ï¿½Ã»ï¿½
 	 */
 	public void add(User user){
 		SqlParameterSource parameters = new BeanPropertySqlParameterSource(user);
@@ -76,7 +76,7 @@ public class UserDaoImpl implements UserDao{
 	
 	/* (non-Javadoc)
 	 * @see com.tanixu.dao.UserDao#findUserByUseracc(java.lang.String)
-	 * ¸ù¾ÝÓÃ»§ÕÊºÅ²éÑ¯
+	 * ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ÊºÅ²ï¿½Ñ¯
 	 */
 	public User findUserByUseracc(String useracc) {
 		String sql = "select * from user_info where useracc = ?";
