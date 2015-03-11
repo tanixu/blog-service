@@ -1,0 +1,32 @@
+package com.tanixu.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tanixu.bean.User;
+import com.tanixu.dao.UserDao;
+import com.tanixu.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService{
+	
+	@Autowired
+	private UserDao userDao;
+
+	public UserDao getUserDao(){
+		return userDao;
+	}
+	
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
+
+
+	public User findUserByUserAcc(String useracc) {
+		User user = userDao.findUserByUseracc(useracc);
+		return user;
+	}
+
+	
+
+}
