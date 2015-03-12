@@ -1,11 +1,6 @@
 package com.tanixu.util;
 
 public class Constant {
-	
-	/**
-	 * @author Administrator
-	 * �û���������
-	 */
 	public enum UserSituationEnum {
 		SUCCESS("100","成功"),
 		USER_NOT_FOUND("101","用户未找到"),
