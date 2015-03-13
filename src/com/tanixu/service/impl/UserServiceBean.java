@@ -8,7 +8,7 @@ import com.tanixu.dao.UserDao;
 import com.tanixu.service.UserService;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceBean implements UserService{
 	
 	@Autowired
 	private UserDao userDao;
@@ -21,12 +21,16 @@ public class UserServiceImpl implements UserService{
 		this.userDao = userDao;
 	}
 
-
-	public User findUserByUserAcc(String useracc) {
-		User user = userDao.findUserByUseracc(useracc);
-		return user;
+	public User findById(Integer id) {
+		return userDao.findById(id);
 	}
 
-	
+	public User findByAccount(String account) {
+		return userDao.findByAccount(account);
+	}
+
+	public Integer add(User user) {
+		return userDao.add(user);
+	}	
 
 }

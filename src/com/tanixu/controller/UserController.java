@@ -40,7 +40,7 @@ public class UserController {
 			return new UserSituation(UserSituationEnum.NO_ACCOUNT.getCode(),UserSituationEnum.NO_ACCOUNT.getValue());
 		if(userpass==null) 
 			return UserSituationEnum.NO_PASSWORD.getValue();
-		User user = userService.findUserByUserAcc(useracc);
+		User user = userService.findByAccount(useracc);
 		return user;
 	}
 	
