@@ -69,4 +69,12 @@ public class TypeServiceBean implements TypeService {
 		return typeDao.add(type);
 	}
 
+	public List<Type> findGradeOne() {
+		return typeDao.findByParentId(0);
+	}
+
+	public List<Type> findByParentId(Integer parentId) {
+		return typeDao.findByParentId(parentId);
+	}
+
 }

@@ -83,4 +83,12 @@ public class TypeDaoBean extends BaseDao implements TypeDao {
 		});
 	}
 
+	public List<Type> findByParentId(Integer parentId) {
+		String sql = "select * from type where parentId = " + parentId;
+		return jdbcTemplate.query(sql, new RowMapper<Type>(){
+			public Type mapRow(ResultSet rs, int row) throws SQLException {
+				return fillResult(rs);
+			}});
+	}
+
 }

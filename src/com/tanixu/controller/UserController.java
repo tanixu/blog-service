@@ -2,8 +2,6 @@ package com.tanixu.controller;
 
 import java.io.IOException;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,7 +30,7 @@ public class UserController {
 
 	@RequestMapping(value="/checkUser")
 	@ResponseBody
-	public Object checkUser(HttpServletResponse response,
+	public Object checkUser(
 			@RequestParam(required=false) String useracc,
 			@RequestParam(required=false) String userpass) throws IOException {
 		System.out.println("checkUser:useracc-"+useracc+",userpass-"+userpass);
